@@ -15,6 +15,6 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Subtitle", name: "subtitle", widget: "string", required: false}
       - { label: "Cover", name: "cover", widget: "image", required: false}
-      - { label: "Tags", name: "tags", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown"}
 
+`
