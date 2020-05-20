@@ -16,5 +16,3 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string", required: false}
       - { label: "Cover", name: "cover", widget: "image", required: false}
       - { label: "Body", name: "body", widget: "markdown"}
-
-`
