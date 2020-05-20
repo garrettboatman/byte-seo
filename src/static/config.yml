@@ -19,5 +19,5 @@ collections:
           name: "list",
           widget: "list",
           fields:
-            - { label: "Cover", name: "cover", widget: "markdown", required: false}
+            - { label: "Text", name: "body", widget: "markdown", required: false}
         }
