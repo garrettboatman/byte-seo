@@ -10,18 +10,231 @@ collections:
     folder: "content/blog"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Subtitle", name: "subtitle", widget: "string", required: false}
-      - { label: "Cover", name: "cover", widget: "image", required: false}
-      - label: "Body"
-        name: "list"
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "website-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Sections"
+        name: "sections"
         widget: "list"
-        fields:
-          - { label: "Text", name: "body", widget: "markdown", required: false}
-          - label: "Image Slider"
-            name: "slider"
-            widget: "list"
-            required: false
+        required: false
+        types:
+          - label: "HeadlineAdvanced"
+            name: "headlineAdvanced"
+            widget: "object"
             fields:
-              - { label: "Image", name: "slider-image", widget: "image", required: false}
+              - label: "Background"
+                name: "background"
+                widget: "select"
+                options:
+                  - { label: "None", value: "" }
+                  - { label: "Cyan", value: "cyan900-010" }
+                  - { label: "Grey", value: "grey100" }
+              - { label: "Title", name: "title", widget: "text" }
+              - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "text",
+                  required: false,
+                }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "HeadlineBasic"
+            name: "headlineBasic"
+            widget: "object"
+            fields:
+              - label: "Background"
+                name: "background"
+                widget: "select"
+                options:
+                  - { label: "None", value: "" }
+                  - { label: "Cyan", value: "cyan900-010" }
+                  - { label: "Purple", value: "purple500-010" }
+                  - { label: "Grey", value: "grey100" }
+              - { label: "Title", name: "title", widget: "text" }
+              - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "text",
+                  required: false,
+                }
+          - label: "Centred Heading"
+            name: "centredHeading"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
+          - label: "Centred Title"
+            name: "centredTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+          - label: "Divided List"
+            name: "dividedList"
+            widget: "object"
+            fields:
+              - label: "List Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Title", name: "title", widget: "text" }
+                  - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Feature With Image"
+            name: "featureWithImage"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Body", name: "body", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Image Side"
+                name: "imageSide"
+                widget: "select"
+                options:
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+                default: ["left"]
+          - label: "Body"
+            name: "body"
+            widget: "object"
+            fields: []
+          - label: "Row List With Image"
+            name: "rowListWithImage"
+            widget: "object"
+            fields:
+              - label: "List items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Title", name: "title", widget: "text" }
+                  - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Tick List With Text"
+            name: "tickListWithText"
+            widget: "object"
+            fields:
+              - label: "List Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Body", name: "body", widget: "text" }
+                  - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Lifecycle"
+            name: "lifecycle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Top Left"
+                name: "topLeft"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "text",
+                      required: true,
+                    }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      required: true,
+                    }
+                  - {
+                      label: "Body",
+                      name: "body",
+                      widget: "text",
+                      required: true,
+                    }
+                required: true
+              - label: "Top Right"
+                name: "topRight"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "text",
+                      required: true,
+                    }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      required: true,
+                    }
+                  - {
+                      label: "Body",
+                      name: "body",
+                      widget: "text",
+                      required: true,
+                    }
+                required: true
+              - label: "Bottom Left"
+                name: "bottomLeft"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "text",
+                      required: true,
+                    }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      required: true,
+                    }
+                  - {
+                      label: "Body",
+                      name: "body",
+                      widget: "text",
+                      required: true,
+                    }
+                required: true
+              - label: "Bottom Right"
+                name: "bottomRight"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Title",
+                      name: "title",
+                      widget: "text",
+                      required: true,
+                    }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      required: true,
+                    }
+                  - {
+                      label: "Body",
+                      name: "body",
+                      widget: "text",
+                      required: true,
+                    }
+                required: true
+          - label: "Testimonial"
+            name: "testimonial"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Request Demo"
+            name: "requestDemo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
