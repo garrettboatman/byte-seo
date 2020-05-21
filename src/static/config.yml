@@ -22,5 +22,6 @@ collections:
           - label: "Image Slider"
             name: "slider"
             widget: "list"
+            required: false
             fields:
               - { label: "Image", name: "slider-image", widget: "image", required: false}
