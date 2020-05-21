@@ -19,3 +19,8 @@ collections:
         widget: "list"
         fields:
           - { label: "Text", name: "body", widget: "markdown", required: false}
+          - label: "Image Slider"
+            name: "slider"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "slider-image", widget: "image", required: false}
