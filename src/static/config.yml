@@ -54,5 +54,4 @@ collections:
                 name: "markdown"
                 widget: "markdown"
                 required: false
-                fields:
           
