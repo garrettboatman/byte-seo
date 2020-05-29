@@ -16,7 +16,7 @@ collections:
           widget: "hidden",
           default: "website-page",
         }
-      - { 
+      - {
           label: "Title",
           name: "title",
           widget: "string",
@@ -40,12 +40,14 @@ collections:
           - { label: "Oral Surgery", value: "oral-surgery" }
           - { label: "Orthodontics", value: "orthodontics" }
           - { label: "HyperByte", value: "hyperbyte" }
+      - label: "Background Image"
+        name: "bg_img"
+        widget: "image"
       - label: "Sections"
         name: "sections"
         widget: "list"
-        required: false
         types:
-          - label: "Body"
+          - label: "Rich Text Block"
             name: "body"
             widget: "object"
             required: false
@@ -53,5 +55,3 @@ collections:
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
-                required: false
-          
