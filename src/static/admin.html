@@ -18,7 +18,7 @@
         const {entry, widgetFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
         const sections = this.props.widgetsFor('sections')
-        conosle.log(sections)
+        console.log(sections)
         let imageMarkup = '';
         if (image) {
           imageMarkup = html`<div><img src='${image.toString()}'/></div>`;
