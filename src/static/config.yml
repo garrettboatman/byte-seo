@@ -28,16 +28,16 @@ collections:
             widget: "markdown"
             required: false
           - label: "Category"
-                name: "category"
-                widget: "select"
-                options:
-                  - { label: "Aligners", value: "aligners" }
-                  - { label: "Braces", value: "braces" }
-                  - { label: "Oral Hygenie", value: "oral-hygenie" }
-                  - { label: "Teeth Straightening", value: "teeth-straightening" }
-                  - { label: "Whitening", value: "whitening" }
-                  - { label: "Conditions", value: "conditions" }
-                  - { label: "Dental Restoration", value: "dental-restoration" }
-                  - { label: "Oral Surgery", value: "oral-surgery" }
-                  - { label: "Orthodontics", value: "orthodontics" }
-                  - { label: "HyperByte", value: "hyperbyte" }
+            name: "category"
+            widget: "select"
+            options:
+              - { label: "Aligners", value: "aligners" }
+              - { label: "Braces", value: "braces" }
+              - { label: "Oral Hygenie", value: "oral-hygenie" }
+              - { label: "Teeth Straightening", value: "teeth-straightening" }
+              - { label: "Whitening", value: "whitening" }
+              - { label: "Conditions", value: "conditions" }
+              - { label: "Dental Restoration", value: "dental-restoration" }
+              - { label: "Oral Surgery", value: "oral-surgery" }
+              - { label: "Orthodontics", value: "orthodontics" }
+              - { label: "HyperByte", value: "hyperbyte" }
