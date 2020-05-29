@@ -15,9 +15,15 @@
     const html = htm.bind(h);
     const PostPreview = createClass({
       render: function() {
-        const {entry, widgetFor} = this.props;
+        const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
-        const sections = this.props.widgetFor('sections')
+        const sections = widgetsFor('sections').map(function(section, index) {
+          return (
+            html`
+              <div key="${index}">${index}</div>
+            `
+          );
+        })
         console.log(sections)
         let imageMarkup = '';
         if (image) {

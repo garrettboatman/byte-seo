@@ -47,7 +47,7 @@ collections:
         name: "sections"
         widget: "list"
         types:
-          - label: "Rich Text Block"
+          - label: "Content Block"
             name: "body"
             widget: "object"
             required: false
