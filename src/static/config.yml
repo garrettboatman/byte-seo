@@ -16,12 +16,16 @@ collections:
           widget: "hidden",
           default: "website-page",
         }
-      - label: "Title" 
-        name: "title"
-        widget: "string"
-      - label: "Slug" 
-        name: "slug"
-        widget: "string"
+      - { 
+          label: "Title",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+        }
       - label: "Category"
         name: "category"
         widget: "select"
