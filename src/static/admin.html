@@ -24,7 +24,6 @@
             `
           );
         })
-        console.log(sections)
         let imageMarkup = '';
         if (image) {
           imageMarkup = html`<div><img src='${image.toString()}'/></div>`;
@@ -36,6 +35,7 @@
               <caption className='blogSubTitle'>${entry.getIn(['data', 'subtitle'])}</caption>
               <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</caption>
               ${imageMarkup}
+              ${sections}
             </div>
           `
         );
