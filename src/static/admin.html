@@ -18,12 +18,13 @@
         const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
         const sections = widgetsFor('sections').map(function(section, index) {
+          console.log(section);
           return (
             html`
               <div key="${index}">${index}</div>
             `
           );
-        })
+        });
         let imageMarkup = '';
         if (image) {
           imageMarkup = html`<div><img src='${image.toString()}'/></div>`;
