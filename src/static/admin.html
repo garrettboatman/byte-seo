@@ -18,9 +18,8 @@
         const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
         const sections = widgetsFor('sections').map(function(section, index) {
-          console.log(section);
           if (section.getIn(['data', 'type']) === 'body') {
-            console.log('type=body', section);
+            console.log(`${index}type=body`, section);
           }
           return (
             html`
