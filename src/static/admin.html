@@ -20,7 +20,7 @@
         const sections = widgetsFor('sections').map(function(section, index) {
           return (
             html`
-              <div key="${index}">${section.getIn(['widgets', 'body'])}</div>
+              <div key="${index}">${index}</div>
             `
           );
         })
