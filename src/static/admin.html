@@ -17,6 +17,7 @@
       render: function() {
         const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
+        console.log(entry);
         const sections = widgetsFor('sections').map(function(section, index) {
           let preview = '';
           console.log(index, section);
