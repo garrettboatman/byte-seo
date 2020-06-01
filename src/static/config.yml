@@ -46,15 +46,11 @@ collections:
       - label: "Sections"
         name: "sections"
         widget: "list"
-        types:
-          - label: "Content Block"
-            name: "block_body"
-            widget: "object"
-            fields:
-              - label: "Markdown"
-                name: "markdown"
-                widget: "markdown"
-              - label: "Image"
-                name: "image"
-                widget: "image"
+        fields:
+          - label: "Markdown"
+            name: "markdown"
+            widget: "markdown"
+          - label: "Image"
+            name: "image"
+            widget: "image"
       - { label: "Body", name: "body", widget: "markdown", required: false }
