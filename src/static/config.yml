@@ -54,6 +54,3 @@ collections:
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
-              - label: "Image"
-                name: "image"
-                widget: "image"

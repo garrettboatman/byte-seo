@@ -20,9 +20,16 @@
         const image = entry.getIn(['data', 'bg_img'])
         console.log(entry);
         
+        let Preview = '';
         const sections = widgetsFor('sections').map(function(section, index) {
-          console.log('1', index, section);
-          return html`<div>${widgetFor('markdown')}</div>`;
+          switch (section.getIn(['data', 'type'])) {
+            case 'body':
+              preview = html`<div key="${index}">${marked(section.get('markdown'))}</div>`;
+              break;
+            default:
+              preview = html`<div key="${index}">No Preview for this Widget</div>`;
+          }
+          return preview;
         });
         
         let imageMarkup = '';
