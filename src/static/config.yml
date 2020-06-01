@@ -48,7 +48,7 @@ collections:
         widget: "list"
         types:
           - label: "Content Block"
-            name: "body4"
+            name: "block_body"
             widget: "object"
             fields:
               - label: "Markdown"
@@ -57,4 +57,4 @@ collections:
               - label: "Image"
                 name: "image"
                 widget: "image"
-      - { label: "Body", name: "body6", widget: "markdown", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
