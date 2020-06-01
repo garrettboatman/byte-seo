@@ -43,13 +43,6 @@ collections:
       - label: "Background Image"
         name: "bg_img"
         widget: "image"
-      - label: "Sections2"
-        name: "sections2"
-        widget: "list"
-        types:
-          - label: "Content Block"
-            name: "body"
-            widget: "markdown"
       - label: "Sections"
         name: "sections"
         widget: "list"
@@ -57,16 +50,15 @@ collections:
           - label: "Content Block"
             name: "body"
             widget: "object"
+            required: false
             fields:
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
-              - label: "Image"
-                name: "image"
-                widget: "image"
           - label: "Slideshow"
             name: "slideshow"
             widget: "object"
+            required: false
             fields:
               - label: "Image"
                 name: "image"
