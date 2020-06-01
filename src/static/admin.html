@@ -18,12 +18,15 @@
         const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
         console.log(entry);
+        const sections2 = widgetsFor('sections2').map(function(section, index) {
+          console.log(index, section);
+        });
         const sections = widgetsFor('sections').map(function(section, index) {
           let preview = '';
           console.log(index, section);
           switch (section.getIn(['data', 'type'])) {
             case 'body':
-              preview = html`<div key="${index}">${section.getIn(['data', 'markdown'])}</div>`;
+              preview = html`<div key="${index}">${widgetFor(['sections', 'front_limit'])}</div>`;
               break;
             default:
               preview = html`<div key="${index}">No Preview for this Widget</div>`;
