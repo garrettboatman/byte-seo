@@ -27,9 +27,8 @@
             case 'content_block':
               const markdown = section.getIn(['data', 'markdown']);
               const markedup = markdown ? marked(markdown) : markdown;
-              
-              console.log(markedup);
-              Preview = html`<div key="${index}">${markedup}</div>`;
+              const component = html`${markedup}`;
+              Preview = html`<div key="${index}">${component}</div>`;
               break;
             default:
               Preview = html`<div key="${index}">No Preview for this Widget</div>`;
