@@ -25,8 +25,9 @@
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
-              const markedup = marked(section.getIn(['data', 'markdown']));
-              console.log(marked);
+              const markdown = section.getIn(['data', 'markdown']);
+              const markedup = markdown ? marked(markdown) : markdown;
+              console.log(markedup);
               Preview = html`<div key="${index}">${markedup}</div>`;
               break;
             default:
