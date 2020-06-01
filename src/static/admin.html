@@ -13,6 +13,8 @@
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
   <script type="module">
     import htm from 'https://unpkg.com/htm?module';
+    import { html, render } from 'https://unpkg.com/htm/preact/standalone.module.js'
+    
     const html = htm.bind(h);
     const PostPreview = createClass({
       render: function() {
@@ -26,7 +28,7 @@
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
               const markdown = section.getIn(['data', 'markdown']);
-              const markedup = markdown ? marked(markdown) : markdown;
+              const markedup = markdown ? html`<div>${marked(markdown)}</div>` : markdown;
               console.log(markedup);
               Preview = html`<div key="${index}">${markedup}</div>`;
               break;
@@ -45,7 +47,7 @@
             <div>
               <h1 className='blogTitle'>${entry.getIn(['data', 'title'])}</h1>
               <caption className='blogSubTitle'>${entry.getIn(['data', 'subtitle'])}</caption>
-              <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</caption>
+              <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</p>
               ${imageMarkup}
               ${sections}
             </div>
