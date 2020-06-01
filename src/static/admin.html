@@ -19,10 +19,6 @@
         const image = entry.getIn(['data', 'bg_img'])
         console.log(entry);
         
-        const sections2 = widgetsFor('sections2').map(function(section, index) {
-          console.log('2', index, section);
-        });
-
         const sections = widgetsFor('sections').map(function(section, index) {
           let preview = '';
           console.log('1', index, section);
