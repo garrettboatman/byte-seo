@@ -18,20 +18,22 @@
         const {entry, widgetFor, widgetsFor} = this.props;
         const image = entry.getIn(['data', 'bg_img'])
         console.log(entry);
+        
         const sections2 = widgetsFor('sections2').map(function(section, index) {
-          console.log(index, section);
+          console.log('2', index, section);
         });
+
         const sections = widgetsFor('sections').map(function(section, index) {
           let preview = '';
-          console.log(index, section);
-          switch (section.getIn(['data', 'type'])) {
-            case 'body':
-              preview = html`<div key="${index}"></div>`;
-              break;
-            default:
-              preview = html`<div key="${index}">No Preview for this Widget</div>`;
-          }
-          return preview;
+          console.log('1', index, section);
+          // switch (section.getIn(['data', 'type'])) {
+          //   case 'body':
+          //     preview = html`<div key="${index}"></div>`;
+          //     break;
+          //   default:
+          //     preview = html`<div key="${index}">No Preview for this Widget</div>`;
+          // }
+          // return preview;
         });
         let imageMarkup = '';
         if (image) {
