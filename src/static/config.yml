@@ -4,6 +4,18 @@ backend:
 media_folder: src/assets
 public_folder: /assets
 collections:
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category" # Used in the UI, ie: "New Post"
+    folder: "content/categories"
+    create: true
+    fields:
+      - label: "Category Title"
+        name: "category_title"
+        widget: "string"
+      - label: "Category Image"
+        name: "category_image"
+        widget: "image"
   - name: "pages"
     label: "Pages"
     label_singular: "Page" # Used in the UI, ie: "New Post"
