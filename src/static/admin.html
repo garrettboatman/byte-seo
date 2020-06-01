@@ -42,6 +42,7 @@
               <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</caption>
               ${imageMarkup}
               ${sections}
+              <p>${widgetFor('body')}</p>
             </div>
           `
         );
