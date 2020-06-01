@@ -17,9 +17,7 @@
     const PostPreview = createClass({
       render: function() {
         const {entry, widgetFor, widgetsFor} = this.props;
-        const image = entry.getIn(['data', 'bg_img'])
-        console.log(entry);
-        
+        const image = entry.getIn(['data', 'bg_img'])        
         let Preview = '';
         const sections = widgetsFor('sections').map(function(section, index) {
           console.log(section);
@@ -27,7 +25,6 @@
             case 'content_block':
               const markdown = section.getIn(['data', 'markdown']);
               const markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
-              console.log(markedup);
               Preview = html`<div key="${index}">${markedup}</div>`;
               break;
             default:
