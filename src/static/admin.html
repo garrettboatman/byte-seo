@@ -6,7 +6,6 @@
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
@@ -27,7 +26,7 @@
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
               const markdown = section.getIn(['data', 'markdown']);
-              const markedup = markdown ? window.HTMLReactParser(marked(markdown)) : markdown;
+              const markedup = markdown ? html`<div dangerouslySetInnerHTML={{ __html: ${marked(markdown)} }}></div>` : markdown;
               console.log(markedup);
               Preview = html`<div key="${index}">${markedup}</div>`;
               break;
