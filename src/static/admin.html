@@ -21,8 +21,9 @@
         
         const sections = widgetsFor('sections').map(function(section, index) {
           console.log('1', index, section);
+          return html`<div>${widgetFor('markdown')}</div>`;
         });
-
+        
         let imageMarkup = '';
         if (image) {
           imageMarkup = html`<div><img src='${image.toString()}'/></div>`;
