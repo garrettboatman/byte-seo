@@ -43,6 +43,13 @@ collections:
       - label: "Background Image"
         name: "bg_img"
         widget: "image"
+      - label: "Sections2"
+        name: "sections2"
+        widget: "list"
+        types:
+          - label: "Content Block"
+            name: "body"
+            widget: "markdown"
       - label: "Sections"
         name: "sections"
         widget: "list"
