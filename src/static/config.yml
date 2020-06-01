@@ -55,3 +55,12 @@ collections:
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
+          - label: "Slideshow"
+            name: "body"
+            widget: "object"
+            required: false
+            fields:
+              - label: "Markdown"
+                name: "markdown"
+                widget: "markdown"
+      - { label: "Body", name: "body", widget: "markdown", required: false }
