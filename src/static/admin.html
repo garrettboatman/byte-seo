@@ -25,7 +25,7 @@
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'body':
-              Preview = html`<div key="${index}">${marked(section.getIn(['data', 'markdown']))}</div>`;
+              // Preview = html`<div key="${index}">${marked(section.getIn(['data', 'markdown']))}</div>`;
               break;
             default:
               Preview = html`<div key="${index}">No Preview for this Widget</div>`;
