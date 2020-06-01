@@ -8,24 +8,16 @@ collections:
     label: "Pages"
     label_singular: "Page" # Used in the UI, ie: "New Post"
     folder: "content/blog"
+    slug: "{{fields.category}}-{{fields.slug}}"
     create: true
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "website-page",
-        }
-      - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-        }
-      - {
-          label: "Slug",
-          name: "slug",
-          widget: "string",
-        }
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "website-page"
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - label: "Category"
         name: "category"
         widget: "select"
@@ -40,6 +32,9 @@ collections:
           - { label: "Oral Surgery", value: "oral-surgery" }
           - { label: "Orthodontics", value: "orthodontics" }
           - { label: "HyperByte", value: "hyperbyte" }
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
       - label: "Background Image"
         name: "bg_img"
         widget: "image"
