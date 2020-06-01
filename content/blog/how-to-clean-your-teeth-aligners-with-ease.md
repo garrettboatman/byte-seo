@@ -12,4 +12,8 @@ sections:
       Super Super cool.
 
       ![Cool alt text](/assets/profile.jpg "Cool title")
+  - type: slideshow
+    image: /assets/lucas-ludwig-dh2ztme9kni-unsplash.jpg
+  - type: slideshow
+    image: /assets/cody-black-nm89mzvar5i-unsplash.jpg
 ---
