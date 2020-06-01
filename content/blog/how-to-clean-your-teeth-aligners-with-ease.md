@@ -9,7 +9,14 @@ sections:
     markdown: |-
       # Hello
 
-      _This is the cool stuff!_
+      *This is the stuff!*
+
+      <p>Help</p>
+
+      ![This the Alt.](/assets/profile.jpg "Cool Title")
   - type: content_block
-    markdown: This markdown editor renders on stuffs.
+    markdown: |-
+      This markdown editor renders on stuffs.
+
+      ## Next Heading!
 ---
