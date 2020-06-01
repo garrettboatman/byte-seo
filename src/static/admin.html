@@ -27,7 +27,8 @@
             case 'content_block':
               const markdown = section.getIn(['data', 'markdown']);
               const markedup = markdown ? marked(markdown) : markdown;
-              const component = html`${markedup}`;
+              const component = html(markedup);
+              console.log(component);
               Preview = html`<div key="${index}">${component}</div>`;
               break;
             default:
