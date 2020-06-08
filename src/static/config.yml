@@ -40,7 +40,7 @@ collections:
         types:
           - label: "Content Block"
             name: "content_block"
-            widget: "object"
+            widget: "list"
             fields:
               - label: "TOC Title"
                 name: "toc_title"
