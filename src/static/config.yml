@@ -25,8 +25,8 @@ collections:
         name: "category"
         widget: "relation"
         collection: "categories"
-        valueField: "category_title"
-        searchFields: ["category_title"]
+        valueField: "title"
+        searchFields: ["title"]
       - label: "Slug"
         name: "slug"
         widget: "string"
