@@ -131,4 +131,4 @@ collections:
         widget: "image"
       - label: "Bio"
         name: "bio"
-        widget: "image"
+        widget: "markdown"
