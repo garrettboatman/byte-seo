@@ -11,10 +11,13 @@ collections:
     slug: "{{fields.category}}--{{fields.slug}}"
     create: true
     fields:
-      - label: "Template Key"
-        name: "templateKey"
-        widget: "hidden"
-        default: "seo-page-standard"
+      - label: "Template"
+        name: "template"
+        default: "standard"
+        widget: "select"
+        options:
+          - { label: "Standard Page", value: "standard" }
+          - { label: "Guide Page", value: "guide" }
       - label: "Title"
         name: "title"
         widget: "string"
