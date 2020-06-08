@@ -6,11 +6,14 @@ public_folder: /assets
 collections:
   - name: "pages"
     label: "Pages"
-    label_singular: "Page" # Used in the UI, ie: "New Post"
+    label_singular: "Page"
     folder: "content/pages"
     slug: "{{fields.category}}--{{fields.slug}}"
     create: true
     fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - label: "Template"
         name: "template"
         default: "standard"
@@ -18,9 +21,6 @@ collections:
         options:
           - { label: "Standard Page", value: "standard" }
           - { label: "Guide Page", value: "guide" }
-      - label: "Title"
-        name: "title"
-        widget: "string"
       - label: "Category"
         name: "category"
         widget: "relation"
@@ -30,7 +30,7 @@ collections:
       - label: "Slug"
         name: "slug"
         widget: "string"
-        hint: "Don't include \"/\" or \"-\""
+        hint: "Don't include \"/\"s"
       - label: "Background Image"
         name: "bg_img"
         widget: "image"
@@ -46,6 +46,7 @@ collections:
                 name: "toc_title"
                 widget: "string"
                 hint: "Sections with TOC Title will show in the Table of Contents"
+                required: false
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
@@ -55,9 +56,10 @@ collections:
         collection: "reviewers"
         valueField: "title"
         searchFields: ["title"]
+        required: false
   - name: "categories"
     label: "Categories"
-    label_singular: "Category" # Used in the UI, ie: "New Post"
+    label_singular: "Category"
     folder: "content/categories"
     create: true
     fields:
@@ -69,7 +71,7 @@ collections:
         widget: "image"
   - name: "reviewers"
     label: "Reviewers (MD)"
-    label_singular: "Reviewer" # Used in the UI, ie: "New Post"
+    label_singular: "Reviewer"
     folder: "content/reviewers"
     create: true
     fields:
