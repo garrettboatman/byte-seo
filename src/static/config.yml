@@ -30,6 +30,7 @@ collections:
       - label: "Slug"
         name: "slug"
         widget: "string"
+        hint: "Don't include \"/\" or \"-\""
       - label: "Background Image"
         name: "bg_img"
         widget: "image"
@@ -52,8 +53,8 @@ collections:
         name: "reviewer"
         widget: "relation"
         collection: "reviewers"
-        valueField: "category_title"
-        searchFields: ["reviewer_name"]
+        valueField: "title"
+        searchFields: ["title"]
   - name: "categories"
     label: "Categories"
     label_singular: "Category" # Used in the UI, ie: "New Post"
