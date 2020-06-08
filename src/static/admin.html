@@ -23,19 +23,21 @@
           toc: [],
           markup: [],
         };
+        let markdown = '';
+        let markedup = '';
         Sections.markup = widgetsFor('sections').map(function(section, index) {
           if (!section) { return '' }
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
               Sections.toc.push(html`<div>${section.getIn(['data', 'toc_title'])}</div>`);
-              const markdown = section.getIn(['data', 'markdown']);
-              const markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
+              markdown = section.getIn(['data', 'markdown']);
+              markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
               Preview = html`<div key="${index}">${markedup}</div>`;
               break;
             case 'callout_box':
-              const markdown = section.getIn(['data', 'markdown']);
-              const markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
+              markdown = section.getIn(['data', 'markdown']);
+              markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
               Preview = html`
                 <div className="${section.getIn(['data', 'template'])}" key="${index}">
                   <h3>${section.getIn(['data', 'title'])}</h3>
