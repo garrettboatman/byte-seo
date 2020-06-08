@@ -48,11 +48,11 @@
             case 'collapsable_content':
               const collapsable_sections = section.getIn(['data', 'sections']).map(function(obj, index) {
                 console.log('collapse', obj);
-                markdown = obj.get(['markdown']);
+                markdown = obj.getIn([1, 1]);
                 markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
                 return html`
                   <div className="collapse">
-                    <h4>${obj.get(['title'])}</h4>
+                    <h4>${obj.getIn([0, 1])}</h4>
                     ${markedup}
                   </div>
                 `;
