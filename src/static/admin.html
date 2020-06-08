@@ -13,6 +13,8 @@
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
   <style>
     .style_1 { background: #ddd; border-left: 5px solid red; }
+    .collapse { }
+    .collapse h4 { border-bottom: 1px solid #ddd; }
   </style>
   <script type="module">
     import htm from 'https://unpkg.com/htm?module';    
@@ -53,7 +55,7 @@
                 markdown = obj.get(['markdown']);
                 markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
                 return html`
-                  <div>
+                  <div className="collapse">
                     <h4>${obj.get(['title'])}</h4>
                     ${markedup}
                   </div>
