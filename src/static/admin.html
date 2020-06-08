@@ -28,7 +28,7 @@
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
-              Sections.toc.push(html`<div>${section.getIn(['data', 'toc_title'])}`);
+              Sections.toc.push(html`<div>${section.getIn(['data', 'toc_title'])}</div>`);
               const markdown = section.getIn(['data', 'markdown']);
               const markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
               Preview = html`<div key="${index}">${markedup}</div>`;
