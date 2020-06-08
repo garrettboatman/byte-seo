@@ -21,5 +21,11 @@ sections:
   - type: content_block
     markdown: This my markdown
     toc_title: This is the best
+  - type: callout_box
+    template: style_1
+    title: Covid Stuff
+    markdown: Here is a callout box to do things.
+  - type: content_block
+    markdown: ""
 reviewer: Garrett Boatman
 ---
