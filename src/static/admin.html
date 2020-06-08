@@ -50,7 +50,7 @@
               <caption className='blogSubTitle'>${entry.getIn(['data', 'subtitle'])}</caption>
               <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</p>
               ${imageMarkup}
-              ${Sections.toc && `<strong>Table of Contents:</strong>` }
+              ${Sections.toc && html`<strong>Table of Contents:</strong>` }
               ${Sections.toc}
               ${Sections.markup}
             </div>
