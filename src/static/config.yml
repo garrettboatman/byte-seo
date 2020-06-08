@@ -51,6 +51,28 @@ collections:
                 name: "markdown"
                 widget: "markdown"
                 required: false
+          - label: "Collapsable Content"
+            name: "collapsable_content"
+            widget: "object"
+            fields:
+              - label: "Type"
+                name: "template"
+                default: "accordion_1"
+                widget: "select"
+                options: 
+                  - { label: "Accordion (full-width)", value: "accordion_1" }
+                  - { label: "Accordion (2 column)", value: "accordion_2" }
+                  - { label: "Tabs", value: "tabs" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Body"
+                    name: "markdown"
+                    widget: "markdown"
       - label: "Medical Reviewer"
         name: "reviewer"
         widget: "relation"

@@ -23,12 +23,12 @@
           toc: [],
           markup: [],
         };
-        sections.markup = widgetsFor('sections').map(function(section, index) {
+        Sections.markup = widgetsFor('sections').map(function(section, index) {
           if (!section) { return '' }
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
-              sections.toc.push(section.getIn(['data', 'toc_title']));
+              Sections.toc.push(section.getIn(['data', 'toc_title']));
               const markdown = section.getIn(['data', 'markdown']);
               const markedup = markdown ? html`<div dangerouslySetInnerHTML=${{ __html: marked(markdown)}}></div>` : markdown;
               Preview = html`<div key="${index}">${markedup}</div>`;
@@ -50,8 +50,8 @@
               <caption className='blogSubTitle'>${entry.getIn(['data', 'subtitle'])}</caption>
               <p className='blogSubTitle'>${entry.getIn(['data', 'category'])} > ${entry.getIn(['data', 'title'])}</p>
               ${imageMarkup}
-              ${sections.toc}
-              ${sections.markup}
+              ${Sections.toc}
+              ${Sections.markup}
             </div>
           `
         );
