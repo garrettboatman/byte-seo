@@ -20,5 +20,6 @@ sections:
         markdown: "### Another Item, Another item"
   - type: content_block
     markdown: This my markdown
+    toc_title: This is the best
 reviewer: Garrett Boatman
 ---
