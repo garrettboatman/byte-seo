@@ -73,6 +73,23 @@ collections:
                   - label: "Body"
                     name: "markdown"
                     widget: "markdown"
+          - label: "Callout Box"
+            name: "callout_box"
+            widget: "object"
+            fields:
+              - label: "Type"
+                name: "template"
+                default: "style_1"
+                widget: "select"
+                options: 
+                  - { label: "Style 1 (Left-aligned)", value: "style_1" }
+                  - { label: "Style 2 (Center-aligned)", value: "style_2" }
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Body"
+                name: "markdown"
+                widget: "markdown"
       - label: "Medical Reviewer"
         name: "reviewer"
         widget: "relation"
