@@ -41,6 +41,10 @@ collections:
             name: "content_block"
             widget: "object"
             fields:
+              - label: "TOC Title"
+                name: "toc_title"
+                widget: "string"
+                hint: "Sections with TOC Title will show in the Table of Contents"
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
