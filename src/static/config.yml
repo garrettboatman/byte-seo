@@ -43,7 +43,7 @@ collections:
             widget: "list"
             fields:
               - label: "TOC Title"
-                name: "toc_title"
+                name: "string"
                 widget: "string"
                 hint: "Sections with TOC Title will show in the Table of Contents"
                 required: false
