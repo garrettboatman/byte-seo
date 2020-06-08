@@ -40,10 +40,10 @@ collections:
         types:
           - label: "Content Block"
             name: "content_block"
-            widget: "list"
+            widget: "object"
             fields:
               - label: "TOC Title"
-                name: "string"
+                name: "toc_title"
                 widget: "string"
                 hint: "Sections with TOC Title will show in the Table of Contents"
                 required: false
