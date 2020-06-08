@@ -10,5 +10,15 @@ sections:
     toc_title: Step 1. Cut a Hole in those Aligners
   - type: content_block
     markdown: This is the tightest
+    toc_title: ""
+  - type: collapsable_content
+    template: accordion_1
+    sections:
+      - title: Cool title
+        markdown: "# Cool Body"
+      - title: Another Item, Another item
+        markdown: "### Another Item, Another item"
+  - type: content_block
+    markdown: This my markdown
 reviewer: Garrett Boatman
 ---
