@@ -20,6 +20,7 @@
         const image = entry.getIn(['data', 'bg_img'])        
         let Preview = '';
         const sections = widgetsFor('sections').map(function(section, index) {
+          if (!section) { return '' }
           console.log(section);
           switch (section.getIn(['data', 'type'])) {
             case 'content_block':
