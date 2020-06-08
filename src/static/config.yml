@@ -41,6 +41,12 @@ collections:
               - label: "Markdown"
                 name: "markdown"
                 widget: "markdown"
+      - label: "Medical Reviewer"
+        name: "reviewer"
+        widget: "relation"
+        collection: "reviewers"
+        valueField: "category_title"
+        searchFields: ["reviewer_name"]
   - name: "categories"
     label: "Categories"
     label_singular: "Category" # Used in the UI, ie: "New Post"
@@ -48,7 +54,7 @@ collections:
     create: true
     fields:
       - label: "Category Title"
-        name: "category_title"
+        name: "title"
         widget: "string"
       - label: "Category Image"
         name: "category_image"
@@ -60,8 +66,11 @@ collections:
     create: true
     fields:
       - label: "Reviewer Name"
-        name: "category_title"
+        name: "title"
         widget: "string"
-      - label: "Reviewer Image"
+      - label: "Photo"
+        name: "reviewer_image"
+        widget: "image"
+      - label: "Bio"
         name: "reviewer_image"
         widget: "image"
